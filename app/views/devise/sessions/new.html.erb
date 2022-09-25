@@ -11,7 +11,7 @@
         </div>
       </div>
     <% end %>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {'data-turbo' => "false"}) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email, class: 'label' %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
@@ -21,7 +21,7 @@
         <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
       </div>
       <div class="actions">
-        <%= f.submit "Login", class: 'button is-primary mb-5 is-fullwidth' %>
+        <%= f.submit "Login", class: 'button is-primary mb-5 is-fullwidth', data: {turbo: false} %>
       </div>
     <% end %>
     <div class="has-text-centered">
