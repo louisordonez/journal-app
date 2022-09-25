@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <span class="is-size-4 has-text-dark has-text-weight-bold"><i class="fa-solid fa-clipboard-check"></i> Journal</span>
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <% if !user_signed_in? && !current_page?('/users/sign_in') && !current_page?('/users/sign_up') %>
+            <%= link_to "Login", new_user_session_path, class: 'button' %>
+            <%= link_to "Sign up", new_user_registration_path, class: 'button is-primary has-text-weight-bold' %>
+          <% end %>
+          <% if user_signed_in? %>
+            <span class="mr-3">Logged in as <strong><%= current_user.email %></strong></span>
+            <%= link_to edit_user_registration_path, class: 'button mr-3' do %>
+              <span class="icon is-small">
+                <i class="fa-solid fa-gear"></i>
+              </span>
+            <% end %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'button' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
