@@ -3,7 +3,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    # @task = Task.find_by(category_id: params[:id])
   end
 
   def new
@@ -11,11 +10,12 @@ class TasksController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:id])
-    @task = @category.task.create(task_params)
-    @task.save
+    # @category = Category.find(params[:id])
+    # @task = @category.task.create(task_params)
+    # @task.save
+    # Category.find(params[:id]).task.create(task_params)
 
-    redirect_to "/categories/#{params[:id]}/tasks"
+    # redirect_to "/categories/#{params[:id]}/tasks"
   end
 
   private
