@@ -15,10 +15,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <% if !user_signed_in? && !current_page?('/users/sign_in') && !current_page?('/users/sign_up') %>
-            <%= link_to "Login", new_user_session_path, class: 'button' %>
-            <%= link_to "Sign up", new_user_registration_path, class: 'button is-primary has-text-weight-bold' %>
-          <% end %>
+          <%= link_to "Login", new_user_session_path, class: 'button' %>
+          <%= link_to "Sign up", new_user_registration_path, class: 'button is-primary has-text-weight-bold' %>
           <% if user_signed_in? %>
             <span class="mr-3">Logged in as <strong><%= current_user.email %></strong></span>
             <%= link_to edit_user_registration_path, class: 'button mr-3' do %>
