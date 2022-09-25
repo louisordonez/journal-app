@@ -1,0 +1,15 @@
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex {
+  display: flex;
+}
+
+.container-margin {
+  margin-top: 6.2rem !important;
+  margin-bottom: 5.6rem !important;
+}
