@@ -74,3 +74,5 @@ end
 gem "cssbundling-rails", "~> 1.1"
 
 gem "hotwire-livereload", "~> 1.2"
+
+gem 'devise'
