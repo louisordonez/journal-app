@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  post "/:id/tasks/new" => "tasks#create"
-  get "categories/:id/tasks" => "tasks#show"
-  get "categories/:id/tasks/new" => "tasks#new"
-
-  resources :tasks
-  resources :categories
+  resources :categories do
+    resources :tasks
+  end
 
   root 'landing#index'
   

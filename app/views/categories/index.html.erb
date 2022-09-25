@@ -19,7 +19,7 @@
               <td><%= category.name %></td>
               <td>
                 <div class="buttons">
-                  <%= link_to 'Show', "/categories/#{category.id}/tasks", class: 'button is-primary' %>
+                  <%= link_to 'Show', category_tasks_path(category), class: 'button is-primary' %>
                   <%= link_to 'Edit', edit_category_path(category), class: 'button is-info' %>
                   <%= link_to 'Delete', category, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'button is-danger' %>
                 </div>

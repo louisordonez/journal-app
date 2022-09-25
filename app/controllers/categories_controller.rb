@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    redirect_to "categories/#{task_path}"
+    redirect_to category_tasks_path
   end
 
   def new
