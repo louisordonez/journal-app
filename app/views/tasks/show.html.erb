@@ -1,0 +1,40 @@
+<div class="columns has-background-light">
+  <div class="column"></div>
+  <div class="column is-three-quarters p-6 box container-margin">
+    <%= link_to 'Back', categories_path, class: 'button mb-6' %>
+    <div class="is-flex is-flex-direction-row is-justify-content-space-between">
+      <h3 class="title is-3 mb-5">Tasks</h3>
+      <%= link_to 'Add Task', "tasks/new", class: 'button is-primary' %>
+    </div>
+    <div>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Deadline</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Task.where(category_id: params[:id].to_i).each do |task| %>
+            <tr>
+              <td><%= task.category_id %></td>
+              <td><%= task.title %></td>
+              <td><%= task.deadline %></td>
+              <td>
+                <div class="buttons">
+                  <%= link_to edit_task_path(task), class: 'button is-info' do %><i class="fa-solid fa-pen"></i><% end %>
+                  <%= link_to task, data: { confirm: "Are you sure?" }, method: :delete, class: 'button is-danger' do %>
+                    <i class='fa-solid fa-trash'></i>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="column"></div>
+</div>

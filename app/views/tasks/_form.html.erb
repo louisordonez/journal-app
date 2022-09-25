@@ -1,0 +1,12 @@
+<div>
+  <%= form_with model: task, url: "/#{params[:id]}/tasks/new" do |f| %>
+    <div class="mb-3">
+      <%= f.label :description, class: 'label' %>
+      <%= f.text_field :description, class: 'input', id: 'description' %>
+    </div>
+    <div class="is-flex is-justify-content-flex-end mt-5">
+      <%= link_to 'Cancel', :back, class: 'button is-light mr-3' %>
+      <%= f.submit class: 'button is-primary' %>
+    </div>
+  <% end %>
+</div>
