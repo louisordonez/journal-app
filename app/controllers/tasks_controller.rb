@@ -1,9 +1,10 @@
 class TasksController < ApplicationController
   def index
-    @task = Task.where(category_id: params[:category_id].to_i)
+    @task = Task.where(category_id: params[:category_id])
   end
 
   def show
+    @task = Task.where(id: params[:id])
   end
 
   def new

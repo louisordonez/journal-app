@@ -1,0 +1,22 @@
+<% @task.each do |task| %>
+  <div class="columns has-background-light">
+    <div class="column"></div>
+    <div class="column is-one-third p-6 box container-margin">
+      <div class="is-flex is-flex-direction-row">
+        <h3 class="title is-3 mb-5"><%= task.title %></h3>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="label">Description</label>
+        <p><%= task.description %></p>
+      </div>
+      <div>
+        <label for="deadline" class="label">Deadline</label>
+        <p><%= task.deadline %></p>
+      </div>
+      <div class="is-flex is-justify-content-flex-end mt-5">
+        <%= link_to 'Back', category_tasks_path, class: 'button is-light mr-3' %>
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+<% end %>

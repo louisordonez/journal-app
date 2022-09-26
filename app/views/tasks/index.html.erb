@@ -1,9 +1,11 @@
 <div class="columns has-background-light">
   <div class="column"></div>
   <div class="column is-three-quarters p-6 box container-margin">
-    <%= link_to 'Back', categories_path, class: 'button mb-6' %>
+    <%= link_to 'Back', categories_path, class: 'button is-light mb-6' %>
     <div class="is-flex is-flex-direction-row is-justify-content-space-between">
-      <h3 class="title is-3 mb-5"><%= Category.find(params[:category_id]).name %></h3>
+      <h3 class="title is-3 mb-5">
+        <%= Category.find(params[:category_id]).name %>
+      </h3>
       <%= link_to 'Create Task', new_category_task_path, class: 'button is-primary' %>
     </div>
     <%= render 'table' %>
