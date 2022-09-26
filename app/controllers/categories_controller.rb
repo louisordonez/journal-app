@@ -29,16 +29,19 @@ class CategoriesController < ApplicationController
 
   def update
     @category = Category.find(params[:id])
-    @category.update(category_params)
 
-    redirect_to categories_path
+    if @category.update(category_params)
+      redirect_to categories_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
 
-    redirect_to categories_path
+    redirect_to categories_path, status: :see_other
   end
 
   private
