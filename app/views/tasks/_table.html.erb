@@ -16,7 +16,15 @@
             <div class="buttons">
               <%= link_to 'Show', category_task_path(task.category_id, task.id), class: 'button is-primary' %>
               <%= link_to 'Edit', edit_category_task_path(task.category_id, task.id), class: 'button is-info' %>
-              <%= link_to 'Delete', category_task_path(task.category_id, task.id), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'button is-danger' %>
+              <%=
+                link_to 'Delete',
+                        category_task_path(task.category_id, task.id),
+                        data: {
+                          turbo_method: :delete,
+                          turbo_confirm: 'Are you sure?',
+                        },
+                        class: 'button is-danger'
+              %>
             </div>
           </td>
         </tr>

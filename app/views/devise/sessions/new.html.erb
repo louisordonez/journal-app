@@ -14,19 +14,17 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email, class: 'label' %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'input' %>
       </div>
       <div class="field mb-5">
         <%= f.label :password, class: 'label' %>
-        <%= f.password_field :password, autocomplete: "current-password", class: 'input' %>
+        <%= f.password_field :password, autocomplete: 'current-password', class: 'input' %>
       </div>
       <div class="actions">
-        <%= f.submit "Login", class: 'button is-primary mb-5 is-fullwidth', data: {turbo: false} %>
+        <%= f.submit 'Login', class: 'button is-primary mb-5 is-fullwidth', data: { turbo: false } %>
       </div>
     <% end %>
-    <div class="has-text-centered">
-      <span>Don't have an account? </span><%= render "devise/shared/links" %>
-    </div>
+    <div class="has-text-centered"><span>Don't have an account? </span><%= render 'devise/shared/links' %></div>
   </div>
   <div class="column"></div>
 </div>
