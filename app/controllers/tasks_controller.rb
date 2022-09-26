@@ -1,6 +1,14 @@
 class TasksController < ApplicationController
+  require 'date'
+
   def index
-    @task = Task.where(category_id: params[:category_id])
+    @filter = params[:filter]
+
+    if @filter == 'today'
+      @task = Task.where(category_id: params[:category_id], deadline: Date.today)
+    else
+      @task = Task.where(category_id: params[:category_id])
+    end
   end
 
   def show
