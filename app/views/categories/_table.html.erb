@@ -1,0 +1,24 @@
+<div>
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th class="categories-table-header-width">Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @category.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td>
+            <div class="buttons">
+              <%= link_to 'Show', category_tasks_path(category), class: 'button is-primary' %>
+              <%= link_to 'Edit', edit_category_path(category), class: 'button is-info' %>
+              <%= link_to 'Delete', category, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'button is-danger' %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

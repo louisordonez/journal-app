@@ -1,0 +1,26 @@
+<div>
+  <table class="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Deadline</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @task.each do |task| %>
+        <tr>
+          <td><%= task.title %></td>
+          <td><%= task.deadline %></td>
+          <td>
+            <div class="buttons">
+              <%= link_to 'Show', category_task_path(task.category_id, task.id), class: 'button is-primary' %>
+              <%= link_to 'Edit', edit_category_task_path(task.category_id, task.id), class: 'button is-info' %>
+              <%= link_to 'Delete', category_task_path(task.category_id, task.id), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'button is-danger' %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
