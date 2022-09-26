@@ -6,8 +6,9 @@
         <%= link_to 'Back', categories_path, class: 'button is-light mb-6' %>
       </div>
       <div class="column is-three-quarters has-text-centered">
-        <%= link_to 'All', category_tasks_path(filter: 'all'), class: 'button is-link mb-6' %>
+        <%= link_to 'All', category_tasks_path, class: 'button is-link mb-6' %>
         <%= link_to 'Today', category_tasks_path(filter: 'today'), class: 'button is-link mb-6' %>
+        <%= link_to 'Overdue', category_tasks_path(filter: 'overdue'), class: 'button is-link mb-6' %>
       </div>
       <div class="column"></div>
     </div>

@@ -4,8 +4,11 @@ class TasksController < ApplicationController
   def index
     @filter = params[:filter]
 
-    if @filter == 'today'
+    case @filter
+    when 'today'
       @task = Task.where(category_id: params[:category_id], deadline: Date.today)
+    when 'overdue'
+      @task = Task.where(category_id: params[:category_id]).where('deadline < ?', Date.today)
     else
       @task = Task.where(category_id: params[:category_id])
     end
