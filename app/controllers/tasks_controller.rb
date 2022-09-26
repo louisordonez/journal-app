@@ -13,9 +13,12 @@ class TasksController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @task = @category.tasks.create(task_params)
-    @task.save
 
-    redirect_to category_tasks_path
+    if @task.save
+      redirect_to category_tasks_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -32,13 +35,13 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    
+
     redirect_to category_tasks_path
   end
 
   private
-    def task_params
-      params.require(:task).permit(:title, :description, :deadline)
-    end
 
+  def task_params
+    params.require(:task).permit(:title, :description, :deadline)
+  end
 end

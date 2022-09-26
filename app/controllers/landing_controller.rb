@@ -4,7 +4,7 @@ class LandingController < ApplicationController
   def check_signed_in
     redirect_to categories_path if signed_in?
   end
-  
+
   def index
   end
 end

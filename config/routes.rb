@@ -3,10 +3,10 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
-  root 'landing#index'
-  
+  root "landing#index"
+
   devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'     
+    get "/users/sign_out" => "devise/sessions#destroy"
   end
 
   devise_for :users

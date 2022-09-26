@@ -1,6 +1,6 @@
-@use './sass-utils/' as *;
-@use './base/' as *;
-@use './components/' as *;
+@use "./sass-utils/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
 
 // @charset "utf-8";
 
@@ -40,4 +40,4 @@
 // @import "bulma/sass/layout/hero.sass";
 // @import "bulma/sass/layout/section.sass";
 
-@import 'bulma/bulma';
+@import "bulma/bulma";

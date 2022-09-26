@@ -15,9 +15,12 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.create(category_params)
-    @category.save
 
-    redirect_to categories_path
+    if @category.save
+      redirect_to categories_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -34,7 +37,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    
+
     redirect_to categories_path
   end
 
