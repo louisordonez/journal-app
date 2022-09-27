@@ -5,7 +5,7 @@ class CreateTaskTest < ActionDispatch::IntegrationTest
   setup { sign_in users(:one) }
 
   test 'should create a task' do
-    category = Category.create({ name: "#{categories(:one).name}" })
+    category = Category.create({ name: 'Test Category Name' })
     get category_tasks_path(category)
     assert_response :success
 
@@ -13,8 +13,8 @@ class CreateTaskTest < ActionDispatch::IntegrationTest
       post category_tasks_path,
            params: {
              task: {
-               title: "#{tasks(:one).title}",
-               description: "#{tasks(:one).description}",
+               title: 'Test Task Title',
+               description: 'Test Task Description',
                deadline: Date.today,
              },
            }
