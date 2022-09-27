@@ -1,6 +1,6 @@
-class TasksController < ApplicationController
-  require 'date'
+require 'date'
 
+class TasksController < ApplicationController
   def index
     @filter = params[:filter]
 
