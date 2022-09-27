@@ -1,0 +1,5 @@
+<% if current_page?('/categories/:category_id/tasks/:id/edit')  %>
+  <%= render 'common_form', model: @task, url: category_tasks_path %>
+<% else %>
+  <%= render 'common_form', model: @task, url: category_task_path %>
+<% end %>
