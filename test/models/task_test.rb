@@ -1,7 +1,6 @@
-require "test_helper"
+require 'test_helper'
 
 class TaskTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
+  # test 'the truth' do
   # end
 end
