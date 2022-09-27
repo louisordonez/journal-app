@@ -4,7 +4,7 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: { title: "Test Task" }
+one: { title: "Test Task Title", description: "Test Task Description" }
 # column: value
 #
 two: {}

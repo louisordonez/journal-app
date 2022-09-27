@@ -13,8 +13,8 @@ class CreateTaskTest < ActionDispatch::IntegrationTest
       post category_tasks_path,
            params: {
              task: {
-               title: 'Test Task Title',
-               description: 'Test Task Description',
+               title: "#{tasks(:one).title}",
+               description: "#{tasks(:one).description}",
                deadline: Date.today,
              },
            }
