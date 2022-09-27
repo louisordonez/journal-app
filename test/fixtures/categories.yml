@@ -4,9 +4,6 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
+category1:
   name: "Test Category Name"
-# column: value
-#
-two: {}
-# column: value
+  user: user1

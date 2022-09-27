@@ -4,11 +4,8 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
+task1:
   title: "Test Task Title"
   description: "Test Task Description"
   deadline: "2022-09-27"
-# column: value
-#
-two: {}
-# column: value
+  category: category1

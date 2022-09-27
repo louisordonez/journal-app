@@ -2,8 +2,8 @@ require 'test_helper'
 
 class LandingControllerTest < ActionDispatch::IntegrationTest
   setup do
-    sign_in users(:one)
-    sign_out users(:one)
+    sign_in users(:user1)
+    sign_out users(:user1)
   end
 
   test 'should get index' do

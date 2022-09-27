@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CreateCategoryTest < ActionDispatch::IntegrationTest
-  setup { sign_in users(:one) }
+  setup { sign_in users(:user1) }
 
   test 'should create a category' do
     get categories_path

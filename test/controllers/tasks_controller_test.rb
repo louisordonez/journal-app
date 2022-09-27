@@ -1,11 +1,10 @@
 require 'test_helper'
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
-  setup { sign_in users(:one) }
+  setup { sign_in users(:user1) }
 
   test 'should get index' do
-    category = Category.create({ name: 'Test Category Name' })
-    get category_tasks_path(category)
+    get category_tasks_path(categories(:category1))
     assert_response :success
   end
 end

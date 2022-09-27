@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
-  setup { sign_in users(:one) }
+  setup { sign_in users(:user1) }
 
   test 'should get index' do
     get categories_path
