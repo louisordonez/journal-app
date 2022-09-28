@@ -76,3 +76,7 @@ gem "cssbundling-rails", "~> 1.1"
 gem "hotwire-livereload", "~> 1.2"
 
 gem "devise"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+end
