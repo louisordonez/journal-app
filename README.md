@@ -20,5 +20,6 @@ A Ruby on Rails application that allows the user to create tasks based on differ
 - Sign in and register an account
 - Create categories
 - Create tasks
+- Filter tasks based on urgency
 
 ### Live Demo: https://journal-app.onrender.com
