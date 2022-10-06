@@ -1,24 +1,24 @@
-# README
+# journal-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Screenshot](./app/assets/images/screenshot_1.png)
 
-Things you may want to cover:
+![Screenshot](./app/assets/images/screenshot_2.png)
 
-- Ruby version
+![Screenshot](./app/assets/images/screenshot_3.png)
 
-- System dependencies
+![Screenshot](./app/assets/images/screenshot_4.png)
 
-- Configuration
+A Ruby on Rails application that allows the user to create tasks based on different categories.
 
-- Database creation
+## Tech Stack
 
-- Database initialization
+- Ruby on Rails
+- Bulma
 
-- How to run the test suite
+## Features
 
-- Services (job queues, cache servers, search engines, etc.)
+- Sign in and register an account
+- Create categories
+- Create tasks
 
-- Deployment instructions
-
-- ...
+### Live Demo: https://journal-app.onrender.com
