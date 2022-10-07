@@ -80,3 +80,5 @@ gem "devise"
 group :development, :test do
   gem 'rspec-rails', '~> 6.0.0.rc1'
 end
+
+gem 'activerecord-cockroachdb-adapter', '~> 7.0.0'
