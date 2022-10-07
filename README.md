@@ -22,4 +22,9 @@ A Ruby on Rails application that allows the user to create tasks based on differ
 - Create tasks
 - Filter tasks based on urgency
 
+## Test Accounts
+
+- `email: user1@email.com`  
+  `password: 123456`
+
 ### Live Demo: https://journal-app.onrender.com
